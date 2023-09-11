@@ -1,12 +1,16 @@
-from calc import mul , sub , add
+from polar_stats import stats_mean, stats_median, stats_mode, stats_std
+import polars as pl
 
-def test_mul():
-    assert mul(1, 2) == 2
-def test_sub():
-    assert sub(1, 2) == -1
-def test_add():
-    assert add(1,2) == 3
+data = pl.read_csv("World University Rankings 2023.csv")
 
-test_mul()
-test_sub()
-test_add()
+# Calculating values for "No of student per staff"
+
+
+def test_values():
+    assert (stats_mean(data)) == 16.724999999999998
+    assert (stats_median(data)) == 13.5
+    assert (stats_mode(data)[0]) == 10.3
+    assert (stats_std(data)) == 10.557828968365254
+
+
+test_values()
