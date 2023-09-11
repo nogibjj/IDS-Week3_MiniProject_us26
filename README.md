@@ -5,7 +5,6 @@
 
 ## Overview
 
-Creating a Python GitHub template that will be used in my future projects.
 
 
 ## Code Description
