@@ -11,7 +11,7 @@
 ## Code Description
 
 1. polar_stats.py -
-2. test_polar_stats.py -
+2. test.py -
 
 
 ## CI/CD Automation files
