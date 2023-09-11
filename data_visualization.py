@@ -1,14 +1,15 @@
 import polars as pl
 import plotly.express as px
 
-data = pl.read_csv("World University Rankings 2023.csv")
+data = pl.read_csv('/Users/udyansachdev/Downloads/World University Rankings 2023.csv')
 
-result  = data.groupby(['Location'])['University Rank'].count().reset_index()
-result1  = data.groupby(['Location'])['Industry Income Score'].mean().reset_index()
-merge_data = pd.merge(result, result1)
+result1 = data.groupby("Location").agg(pl.col("University Rank").count())
+result2 = data.groupby("Location").agg(pl.col("Industry Income Score").mean())
 
-fig = px.scatter(merge_data, x="Industry Income Score", y="University Rank", color="Location",
-                 size='University Rank')
+joined = result1.join(result2, left_on="Location", right_on="Location")
+
+fig = px.scatter(joined, x= joined['Industry Income Score'], y=joined["University Rank"], color=joined["Location"],
+                 size=joined['University Rank'])
 fig.update_layout(
     title="Analysing Top Universities",
     xaxis_title="Mean of Industry Income Score",
