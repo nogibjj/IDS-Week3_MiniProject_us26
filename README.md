@@ -12,7 +12,12 @@
 
 1. polar_stats.py -
 2. test.py -
+3. data_visualization.py -
+   The output of the visualization code is  :
 
+<p align="center">
+  <img width="650" src="https://github.com/nogibjj/IDS-Week3_MiniProject_us26/blob/main/visualization.png" alt="My Image1">
+</p>
 
 ## CI/CD Automation files
 
