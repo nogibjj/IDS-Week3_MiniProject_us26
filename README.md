@@ -1,5 +1,6 @@
 # Polars Descriptive Statistics Script
 
+ [![Python Polar CI](https://github.com/nogibjj/IDS-Week3_MiniProject_us26/actions/workflows/main.yml/badge.svg)](https://github.com/nogibjj/IDS-Week3_MiniProject_us26/actions/workflows/main.yml)
 
 ### Creating  a Python GitHub template
 
