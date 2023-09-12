@@ -6,8 +6,8 @@ def visualization():
 
   data = pl.read_csv('World University Rankings 2023.csv')
 
-  result1 = data.groupby("Location").agg(pl.col("University Rank").count())
-  result2 = data.groupby("Location").agg(pl.col("Industry Income Score").mean())
+  result1 = data.group_by("Location").agg(pl.col("University Rank").count())
+  result2 = data.group_by("Location").agg(pl.col("Industry Income Score").mean())
 
   joined = result1.join(result2, left_on="Location", right_on="Location")
 
