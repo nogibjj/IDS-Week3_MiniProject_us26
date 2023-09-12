@@ -1,5 +1,6 @@
 import polars as pl
 import plotly.express as px
+import os
 
 def visualization():
 
