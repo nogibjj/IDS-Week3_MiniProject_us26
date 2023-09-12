@@ -18,9 +18,9 @@ def visualization():
     yaxis_title="Count of Top Universities")
 #fig.show()
 
-    if not os.path.exists("output_graph"):
+  if not os.path.exists("output_graph"):
         os.mkdir("output_graph")
 
-    fig.write_image("output_graph/visualization.png")
+  fig.write_image("output_graph/visualization.png")
 
 visualization()
