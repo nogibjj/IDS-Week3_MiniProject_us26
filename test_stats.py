@@ -1,4 +1,4 @@
-from polar_stats import stats_mean, stats_median, stats_mode, stats_std
+from polar_stats import stats_mean, stats_median, stats_mode, stats_std , create_summary
 import polars as pl
 
 data = pl.read_csv("World University Rankings 2023.csv")
