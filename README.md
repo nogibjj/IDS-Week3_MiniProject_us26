@@ -26,6 +26,12 @@ This repo has been created using my week 1 mini project as the template which ha
   <img width="650" src="https://github.com/nogibjj/IDS-Week3_MiniProject_us26/blob/main/output_graph/visualization.png" alt="My Image1">
 </p>
 
+### Action include the general CI/CD process in main.py, which  automatically generate the graph and markdown
+
+<p align="center">
+  <img width="650" src="https://github.com/nogibjj/IDS-Week3_MiniProject_us26/blob/main/Image/yml_actions.png" alt="My Image2">
+</p>
+
 ## CI/CD Automation files
 
 1. requirements.txt - Contains all the required python packages
