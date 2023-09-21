@@ -36,3 +36,4 @@ def create_summary(data, file_path):
         f.write("\n")
         for key, value in report(data).items():
             f.write("%s:%s\n" % (key, value))
+            f.write("\n")
