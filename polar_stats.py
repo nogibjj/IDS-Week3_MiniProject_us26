@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def stats_mean(dataset):
     return dataset["No of student per staff"].mean()
     
@@ -24,8 +26,11 @@ def report(data):
 
     return result
 
-def create_summary(data, file_path="Generated summary report.md"):
+def create_summary(data, file_path):
+    now = datetime.now()
+    dt_string = now.strftime("%d-%b-%Y %H:%M") + " (UTC)"
     with open(file_path, "w", encoding="utf-8") as f:
+        f.write(dt_string)
+        f.write("\n")
         for key, value in report(data).items():
             f.write("%s:%s\n" % (key, value))
-            f.write('\n')
